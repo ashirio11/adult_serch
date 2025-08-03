@@ -1,0 +1,403 @@
+@charset "UTF-8";
+/* ベースカラー */
+body {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ffdde1), to(#ee9ca7));
+  background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.cute-title {
+  color: #e91e63;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px #f8bbd0;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 500px) {
+  .cute-title {
+    font-size: 1.8rem;
+  }
+}
+/* タイトル */
+h2, h3 {
+  color: #b30059;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* 検索ボタン・通常ボタン */
+button {
+  background-color: #b30059;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.2s;
+  transition: background-color 0.3s, -webkit-transform 0.2s;
+  transition: transform 0.2s, background-color 0.3s;
+  transition: transform 0.2s, background-color 0.3s, -webkit-transform 0.2s;
+  margin: 0.5rem;
+}
+
+button:hover {
+  background-color: #800040;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/* 入力欄 */
+input[type=text],
+input[type=number],
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0.5rem;
+  width: 200px;
+}
+
+/* チェックボックス */
+input[type=checkbox] {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  margin-right: 0.5rem;
+}
+
+/* 商品・女優カード共通 */
+.card {
+  background: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+/* 商品画像 */
+.card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* 入力グループ */
+.input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* 入力エリアを縦並び */
+.input-group-vertical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 各ラベルと入力を横並び */
+.input-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+/* ラベル幅を固定して整える */
+.input-line label {
+  width: 80px;
+  font-weight: bold;
+}
+
+.cup-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 40px;
+  font-size: 0.9rem;
+  margin-right: 0.3rem;
+}
+
+/* 女優カードのグリッド */
+.actress-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+@media (min-width: 960px) {
+  .actress-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* カップ数の全体ラッパー */
+.cup-checkbox-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0.5rem 0;
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  .cup-checkbox-group {
+    max-width: 280px;
+  }
+}
+
+.cup-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 40px;
+  font-size: 0.9rem;
+  margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+/* 女優カードの文字サイズを2倍に */
+@media (min-width: 768px) and (max-width: 959px) {
+  .card p {
+    font-size: 2em;
+  }
+}
+/* チェックボックスの通常サイズ */
+input[type=checkbox] {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  margin-right: 0.5rem;
+}
+
+/* ✅ 768px以下でさらに大きく */
+@media (max-width: 767px) {
+  input[type=checkbox] {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  .cup-checkbox {
+    font-size: 1.2rem;
+  }
+}
+/* カップ数チェック全体ラッパー */
+.cup-checkbox-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0.5rem 0;
+}
+@media (min-width: 769px) and (max-width: 959px) {
+  .cup-checkbox-group {
+    max-width: 280px;
+  }
+}
+@media (max-width: 768px) {
+  .cup-checkbox-group {
+    padding: 1rem;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+  }
+}
+
+/* 各カップボタンに余白を追加（モバイル） */
+@media (max-width: 768px) {
+  .cup-checkbox {
+    margin: 0.5rem;
+    font-size: 1.2rem;
+  }
+  input[type=checkbox] {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    margin-right: 0.5rem;
+  }
+}
+.checkbox-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+@media (max-width: 800px) {
+  .checkbox-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
+    gap: 0.5rem;
+  }
+}
+
+/* 1行目の入力欄 */
+.search-input-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* 2行目のチェックボックスとボタン */
+.search-options-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin-left: 1rem;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; /* 横並び固定 */
+  /* 800px以下でも横並びにする */
+}
+@media (max-width: 800px) {
+  .search-options-row {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+.search-options-row label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+.search-options-row label input[type=checkbox] {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  margin: 0;
+}
+.search-options-row button {
+  margin: 0;
+}
+
+/* 800px以下でのレイアウト調整 */
+@media (max-width: 480px) {
+  .search-input-row,
+  .search-options-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .search-options-row {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+.input-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.input-line label {
+  width: 80px;
+  font-weight: bold;
+}
+.input-line input[type=number],
+.input-line input[type=text] {
+  width: 200px;
+}
+@media (max-width: 600px) {
+  .input-line {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .input-line label {
+    width: auto;
+    margin-bottom: 0.2rem;
+  }
+  .input-line .range-inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .input-line .range-inputs input[type=number],
+  .input-line .range-inputs input[type=text] {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    min-width: 0;
+  }
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
