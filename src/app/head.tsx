@@ -8,7 +8,7 @@ export default function Head() {
       />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="UTF-8" />
-      <meta name="google-site-verification" content="googleb4a5c6227472c146" />
+      <meta name="google-site-verification" content="4gUtlL7KwbUJHn8PUnCLWin8_P86TfkWOTHGUcEyGV0" />
     </>
   );
 }
